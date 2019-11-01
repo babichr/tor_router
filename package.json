@@ -1,0 +1,51 @@
+{
+  "name": "tor-router",
+  "version": "4.0.11",
+  "main": "src/index.js",
+  "repository": "git@github.com:znetstar/tor-router.git",
+  "author": "Zachary Boyd <zachary@zacharyboyd.nyc>",
+  "license": "Apache-2.0",
+  "description": "A SOCKS, HTTP and DNS proxy for distributing traffic across multiple instances of Tor",
+  "bin": {
+    "tor-router": "bin/tor-router"
+  },
+  "keywords": [
+    "tor"
+  ],
+  "scripts": {
+    "start": "bin/tor-router -s -d -j 100",
+    "test": "mocha -u tdd --exit test/index.js",
+    "debug": "node --inspect-brk bin/tor-router",
+    "docs": "grunt docs"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "docdash": "^1.0.0",
+    "grunt": "^1.0.3",
+    "grunt-jsdoc": "^2.3.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.2.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "requestretry": "^2.0.2",
+    "socks-proxy-agent": "^4.0.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "del": "^3.0.0",
+    "eventemitter3": "^3.1.0",
+    "get-port": "^2.1.0",
+    "granax": "^3.1.4",
+    "js-weighted-list": "^0.1.1",
+    "lodash": "^4.17.4",
+    "multi-rpc": "^1.5.5",
+    "nanoid": "^1.2.3",
+    "native-dns": "git+https://github.com/znetstar/node-dns.git#336f1d3027b2a3da719b5cd65380219267901aeb",
+    "nconf": "^0.10.0",
+    "shelljs": "^0.8.2",
+    "socksv5": "git+https://github.com/znetstar/socksv5.git#1480422215cf1464fa06f5aec4a3e7f2117e3403",
+    "temp": "^0.8.3",
+    "winston": "^3.0.0-rc5",
+    "yargs": "^11.0.0"
+  }
+}

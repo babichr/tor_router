@@ -1,0 +1,7 @@
+version: '3'
+services:
+  router:
+    image: znetstar/tor-router
+    restart: always
+    ports:
+     - "9050:9050"
